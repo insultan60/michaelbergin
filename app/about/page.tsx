@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import { about } from "@/lib/site";
+import { asset } from "@/lib/base-path";
 
 export const metadata: Metadata = { title: "About Michael" };
 
@@ -16,7 +17,7 @@ export default function AboutPage() {
           <Reveal className="relative md:sticky md:top-28">
             <div className="absolute -top-4 -left-4 h-full w-full rounded-3xl bg-mist" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/michael.jpg" alt="Michael Bergin" className="relative aspect-[4/5] w-full rounded-3xl object-cover object-top" />
+            <img src={asset("/img/michael.jpg")} alt="Michael Bergin" className="relative aspect-[4/5] w-full rounded-3xl object-cover object-top" />
             <p className="absolute right-5 bottom-5 rounded-2xl bg-white/95 px-5 py-3 text-sm font-medium shadow-xl">{dre.p}</p>
           </Reveal>
           <div className="space-y-6 text-[17px] leading-[1.8] text-muted">

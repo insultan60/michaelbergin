@@ -5,6 +5,7 @@ import Gallery from "@/components/Gallery";
 import ListingCard, { Specs } from "@/components/ListingCard";
 import LocationMap from "@/components/LocationMap";
 import { listings } from "@/lib/site";
+import { asset } from "@/lib/base-path";
 
 export function generateStaticParams() {
   return listings.map((l) => ({ slug: l.slug }));
@@ -109,7 +110,7 @@ export default async function PropertyPage({ params }: PageProps<"/properties/[s
           </div>
           <aside className="h-fit rounded-3xl bg-mist p-7 md:sticky md:top-24">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/michael.jpg" alt="Michael Bergin" className="h-16 w-16 rounded-full object-cover object-top" />
+            <img src={asset("/img/michael.jpg")} alt="Michael Bergin" className="h-16 w-16 rounded-full object-cover object-top" />
             <p className="mt-4 text-lg font-semibold">Michael Bergin</p>
             <p className="text-sm text-muted">CA DRE# 01845572</p>
             <Link href="/contact" className="mt-6 block rounded-full bg-navy py-3.5 text-center text-sm text-white hover:bg-navy-3">Request a showing</Link>

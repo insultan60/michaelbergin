@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { IconPhone } from "./Icons";
+import { asset } from "@/lib/base-path";
 
 const field = "h-12 w-full border-b border-line bg-transparent text-[15px] outline-none placeholder:text-muted/70 focus:border-navy";
 
@@ -36,7 +37,7 @@ export default function Contact() {
           <a href="tel:3106000715" className="mt-9 flex w-fit items-center gap-4">
             <span className="grid h-12 w-12 place-items-center rounded-full bg-navy text-white"><IconPhone className="h-5 w-5" /></span>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/michael.jpg" alt="" className="-ml-7 h-12 w-12 rounded-full object-cover object-top ring-2 ring-white" />
+            <img src={asset("/img/michael.jpg")} alt="" className="-ml-7 h-12 w-12 rounded-full object-cover object-top ring-2 ring-white" />
             <span>
               <span className="block text-xs text-muted">Call or text Michael</span>
               <span className="tnum text-lg font-semibold">310.600.0715</span>

@@ -1,5 +1,6 @@
 "use client";
 
+import { asset } from "@/lib/base-path";
 import { useState } from "react";
 import { IconHome } from "./Icons";
 
@@ -9,7 +10,7 @@ export default function Valuation() {
     <section id="valuation" className="px-3 pt-24 md:px-6 md:pt-32">
       <div className="relative mx-auto max-w-[1240px] overflow-hidden rounded-[28px] bg-navy text-white">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/img/slide-8.jpg" alt="" className="absolute inset-0 h-full w-full object-cover opacity-25" />
+        <img src={asset("/img/slide-8.jpg")} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25" />
         <div className="relative grid items-center gap-10 p-8 md:grid-cols-2 md:p-16">
           <div>
             <span className="grid h-14 w-14 place-items-center rounded-full bg-white/10 ring-1 ring-white/20"><IconHome /></span>

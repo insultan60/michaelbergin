@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import { initials, team } from "@/lib/site";
+import { asset } from "@/lib/base-path";
 
 export const metadata: Metadata = { title: "Meet The Team" };
 
@@ -15,7 +16,7 @@ export default function TeamPage() {
           <Reveal className="sm:col-span-2 lg:col-span-1 lg:row-span-2">
             <Link href="/about" className="group relative block h-full min-h-[420px] overflow-hidden rounded-3xl">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/img/michael.jpg" alt="Michael Bergin" className="absolute inset-0 h-full w-full object-cover object-top transition duration-[1400ms] group-hover:scale-105" />
+              <img src={asset("/img/michael.jpg")} alt="Michael Bergin" className="absolute inset-0 h-full w-full object-cover object-top transition duration-[1400ms] group-hover:scale-105" />
               <div className="absolute inset-x-4 bottom-4 rounded-2xl bg-white p-5">
                 <p className="text-lg font-semibold">Michael Bergin</p>
                 <p className="text-sm text-muted">CA DRE# 01845572</p>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Listing } from "@/lib/site";
 import { IconArea, IconBath, IconBed, IconHome } from "./Icons";
+import { asset } from "@/lib/base-path";
 
 export function Specs({ l, className = "" }: { l: Listing; className?: string }) {
   return (
@@ -19,7 +20,7 @@ export default function ListingCard({ l }: { l: Listing }) {
       <div className="relative aspect-[4/3] overflow-hidden bg-navy">
         {photo ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={photo} alt={`${l.street}, ${l.city}`} className="h-full w-full object-cover transition duration-[1400ms] group-hover:scale-105" />
+          <img src={asset(photo)} alt={`${l.street}, ${l.city}`} className="h-full w-full object-cover transition duration-[1400ms] group-hover:scale-105" />
         ) : (
           // No photos were captured for this MLS listing: show a typographic card instead of a stock image
           <div className="flex h-full flex-col justify-between bg-gradient-to-br from-navy to-navy-3 p-6 text-white">

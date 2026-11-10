@@ -7,6 +7,7 @@ import { type Listing, listings, priceNum } from "@/lib/site";
 import ListingCard, { Specs } from "./ListingCard";
 import { IconArrow, IconHome } from "./Icons";
 import { shortPrice } from "./ListingMap";
+import { asset } from "@/lib/base-path";
 
 const ListingMap = dynamic(() => import("./ListingMap"), { ssr: false, loading: () => <div className="h-full w-full animate-pulse bg-mist-2" /> });
 
@@ -151,7 +152,7 @@ export default function PropertiesBrowser() {
                 <div className="relative w-36 shrink-0 bg-navy">
                   {pickedL.photos[0] ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={pickedL.photos[0]} alt="" className="absolute inset-0 h-full w-full object-cover" />
+                    <img src={asset(pickedL.photos[0])} alt="" className="absolute inset-0 h-full w-full object-cover" />
                   ) : (
                     <IconHome className="absolute inset-0 m-auto h-8 w-8 text-white/50" />
                   )}

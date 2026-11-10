@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import { AREA_IMG, communities, firstParagraph, listingsIn } from "@/lib/site";
 import { IconArrow } from "@/components/Icons";
+import { asset } from "@/lib/base-path";
 
 export const metadata: Metadata = { title: "Neighborhoods" };
 
@@ -17,7 +18,7 @@ export default function NeighborhoodsPage() {
             <Reveal key={c.slug} delay={(i % 3) * 80}>
               <Link href={`/neighborhoods/${c.slug}`} className="group relative block aspect-[4/5] overflow-hidden rounded-3xl bg-navy text-white">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={AREA_IMG[c.slug]} alt="" className="h-full w-full object-cover opacity-85 transition duration-[1400ms] group-hover:scale-105" />
+                <img src={asset(AREA_IMG[c.slug])} alt="" className="h-full w-full object-cover opacity-85 transition duration-[1400ms] group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <p className="text-xs tracking-[0.25em] text-gold uppercase">{listingsIn(c.name).length} properties</p>

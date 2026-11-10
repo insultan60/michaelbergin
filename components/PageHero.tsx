@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { asset } from "@/lib/base-path";
 
 // Navy banner at the top of every inner page (the header sits over it in white)
 export default function PageHero({
@@ -19,7 +20,7 @@ export default function PageHero({
       {image && (
         <>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={image} alt="" className="drift absolute inset-0 h-full w-full object-cover" />
+          <img src={asset(image)} alt="" className="drift absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/75 to-navy/40" />
         </>
       )}

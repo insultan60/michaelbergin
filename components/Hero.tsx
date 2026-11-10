@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { IconArrow } from "./Icons";
+import { asset } from "@/lib/base-path";
 
 // Michael's latest property tour on his YouTube channel
 const VIDEO = "WFcku7vtH54";
@@ -22,7 +23,7 @@ export default function Hero() {
     <section id="top" className="relative flex h-svh min-h-[600px] flex-col overflow-hidden bg-navy text-white">
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/img/slide-1.jpg" alt="" className="drift absolute inset-0 h-full w-full object-cover" />
+        <img src={asset("/img/slide-1.jpg")} alt="" className="drift absolute inset-0 h-full w-full object-cover" />
         <iframe
           src={`https://www.youtube-nocookie.com/embed/${VIDEO}?autoplay=1&mute=1&loop=1&playlist=${VIDEO}&controls=0&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&fs=0`}
           title="Background film"
@@ -68,7 +69,7 @@ export default function Hero() {
           </dl>
           <Link href="/properties/4365-kraft-ave-studio-city" className="group hidden items-center gap-3 rounded-2xl bg-white/10 p-2 pr-5 ring-1 ring-white/15 backdrop-blur-md transition hover:bg-white/20 sm:flex">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/slide-1.jpg" alt="" className="h-14 w-20 rounded-xl object-cover" />
+            <img src={asset("/img/slide-1.jpg")} alt="" className="h-14 w-20 rounded-xl object-cover" />
             <span>
               <span className="block text-[11px] tracking-wider text-white/60 uppercase">Featured property · Studio City</span>
               <span className="block font-medium">4365 Kraft Ave · <span className="tnum">$4,499,000</span></span>

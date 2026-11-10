@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { blog, firstParagraph } from "@/lib/site";
+import { asset } from "@/lib/base-path";
 
 export const metadata: Metadata = { title: "Blog" };
 const IMG = ["/img/slide-2.jpg", "/img/slide-4.jpg", "/img/slide-6.jpg"];
@@ -16,7 +17,7 @@ export default function BlogPage() {
             <Link key={b.slug} href={`/blog/${b.slug}`} className="group block overflow-hidden rounded-2xl bg-white p-3">
               <div className="aspect-[4/3] overflow-hidden rounded-xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={IMG[i % 3]} alt="" className="h-full w-full object-cover transition duration-[1400ms] group-hover:scale-105" />
+                <img src={asset(IMG[i % 3])} alt="" className="h-full w-full object-cover transition duration-[1400ms] group-hover:scale-105" />
               </div>
               <div className="p-3 pt-5">
                 <p className="text-lg leading-snug font-medium">{b.title}</p>

@@ -9,6 +9,7 @@ import {
   IconArrow, IconChart, IconFilm, IconHills, IconHome, IconKey, IconLake, IconOak, IconPalm, IconTag, IconVillage,
 } from "@/components/Icons";
 import { GUIDE_GROUPS, about, firstParagraph, guideLabel, guides, initials, listingsIn, team } from "@/lib/site";
+import { asset } from "@/lib/base-path";
 
 // Short labels are ours; every description is a sentence from Michael's About page, word for word
 const STRENGTHS = [
@@ -60,7 +61,7 @@ export default function Home() {
             <h2 className="h-display text-4xl md:text-[3.2rem]">Why Work With Michael</h2>
             <p className="mt-5 max-w-md text-muted">{bio[0].p}</p>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/listings/3430-wrightwood-dr-studio-city-california-91604-1.jpg" alt="3430 Wrightwood Dr, Studio City" className="mt-10 aspect-[16/10] w-full rounded-2xl object-cover" />
+            <img src={asset("/img/listings/3430-wrightwood-dr-studio-city-california-91604-1.jpg")} alt="3430 Wrightwood Dr, Studio City" className="mt-10 aspect-[16/10] w-full rounded-2xl object-cover" />
           </Reveal>
           <div className="divide-y divide-line">
             {STRENGTHS.map(({ icon: Icon, t, d }, i) => (
@@ -88,7 +89,7 @@ export default function Home() {
           {AREAS.map(({ slug, name, icon: Icon, img }) => (
             <Link key={slug} href={`/neighborhoods/${slug}`} className="group relative flex aspect-square flex-col items-center justify-center overflow-hidden border-r border-b border-line p-6 text-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={img} alt="" className="absolute inset-0 h-full w-full scale-110 object-cover opacity-0 transition duration-700 group-hover:scale-100 group-hover:opacity-100" />
+              <img src={asset(img)} alt="" className="absolute inset-0 h-full w-full scale-110 object-cover opacity-0 transition duration-700 group-hover:scale-100 group-hover:opacity-100" />
               <span className="absolute inset-0 bg-navy/70 opacity-0 transition duration-700 group-hover:opacity-100" />
               <Icon className="relative h-14 w-14 stroke-[1.1] text-navy transition group-hover:text-white" />
               <p className="relative mt-5 text-lg font-medium transition group-hover:text-white">{name}</p>
@@ -106,7 +107,7 @@ export default function Home() {
           <Reveal className="relative">
             <div className="absolute -top-5 -left-5 h-full w-full rounded-3xl bg-mist" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/img/michael.jpg" alt="Michael Bergin" className="relative aspect-[4/5] w-full rounded-3xl object-cover object-top" />
+            <img src={asset("/img/michael.jpg")} alt="Michael Bergin" className="relative aspect-[4/5] w-full rounded-3xl object-cover object-top" />
             <div className="absolute right-5 bottom-5 rounded-2xl bg-white/95 p-5 shadow-xl backdrop-blur">
               <p className="tnum text-3xl font-semibold">15+</p>
               <p className="text-sm text-muted">Years of experience</p>
@@ -163,7 +164,7 @@ export default function Home() {
                 <Link href={`/guides/${g}`} className="group block overflow-hidden rounded-2xl bg-white p-3">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={GUIDE_IMG[g]} alt="" className="h-full w-full object-cover transition duration-[1600ms] group-hover:scale-105" />
+                    <img src={asset(GUIDE_IMG[g])} alt="" className="h-full w-full object-cover transition duration-[1600ms] group-hover:scale-105" />
                     <span className="absolute top-3 left-3 rounded-md bg-white px-2.5 py-1 text-[11px] font-medium">{guides[g].steps.length} steps</span>
                   </div>
                   <div className="p-3 pt-5">

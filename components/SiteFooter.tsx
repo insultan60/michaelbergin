@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { asset } from "@/lib/base-path";
+
 const FLOAT = [
   ["/img/slide-2.jpg", "left-[8%] top-[22%] w-24 md:w-32", "0s"],
   ["/img/slide-4.jpg", "left-[2%] top-[52%] w-20 md:w-28", "1.5s"],
@@ -12,11 +15,11 @@ export default function SiteFooter() {
       <div className="relative mx-auto max-w-[1240px] px-5 py-28 text-center md:py-36">
         {FLOAT.map(([src, pos, delay]) => (
           // eslint-disable-next-line @next/next/no-img-element
-          <img key={src} src={src} alt="" className={`bob absolute hidden aspect-[4/3] rounded-lg object-cover opacity-90 sm:block ${pos}`} style={{ animationDelay: delay }} />
+          <img key={src} src={asset(src)} alt="" className={`bob absolute hidden aspect-[4/3] rounded-lg object-cover opacity-90 sm:block ${pos}`} style={{ animationDelay: delay }} />
         ))}
         <h2 className="h-display relative mx-auto max-w-lg text-4xl md:text-[3.4rem]">Ready To Get Started?</h2>
         <p className="relative mx-auto mt-5 max-w-md text-white/65">Michael represents buyers and sellers throughout Southern California, from the coast to the San Fernando Valley.</p>
-        <a href="/contact" className="relative mt-8 inline-block rounded-full bg-white px-7 py-3.5 text-sm font-medium text-navy hover:bg-mist">Contact Michael</a>
+        <a href={asset("/contact")} className="relative mt-8 inline-block rounded-full bg-white px-7 py-3.5 text-sm font-medium text-navy hover:bg-mist">Contact Michael</a>
       </div>
 
       <div className="mx-auto max-w-[1240px] border-t border-white/10 px-5">
@@ -36,7 +39,7 @@ export default function SiteFooter() {
               <p className="font-medium">{h}</p>
               <ul className="mt-5 space-y-3 text-sm text-white/60">
                 {(items as string[]).map((l) => (
-                  <li key={l}><a href={h === "Areas" ? `/neighborhoods/${l.toLowerCase().replace(/\s+/g, "-")}` : `/${l.toLowerCase()}`} className="hover:text-white">{l}</a></li>
+                  <li key={l}><Link href={h === "Areas" ? `/neighborhoods/${l.toLowerCase().replace(/\s+/g, "-")}` : `/${l.toLowerCase()}`} className="hover:text-white">{l}</Link></li>
                 ))}
               </ul>
             </div>
