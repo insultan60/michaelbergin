@@ -24,7 +24,8 @@ const Arrow = () => (
 // Modelled on the Andrew Liberty Team header: full-width bar, serif wordmark, underline nav,
 // phone + primary CTA, frosted and shorter once scrolled, full-screen mobile menu.
 export default function SiteHeader() {
-  const path = usePathname();
+  // GitHub Pages serves "/properties/" (trailing slash); compare without it
+  const path = usePathname().replace(/\/+$/, "") || "/";
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
