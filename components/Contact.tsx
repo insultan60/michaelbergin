@@ -27,7 +27,7 @@ export default function Contact() {
                 </select>
               </label>
               <label className="text-xs font-medium">Your Message<textarea rows={4} className="mt-2 w-full rounded-xl border border-line p-3 text-[15px] outline-none focus:border-navy" placeholder="Your message" /></label>
-              <button className="h-13 rounded-full bg-navy text-sm font-medium text-white transition hover:bg-navy-3">Book an Appointment</button>
+              <button className="h-13 rounded-full bg-navy text-sm font-medium text-white transition hover:bg-gold hover:text-navy">Book an Appointment</button>
             </form>
           )}
         </div>

@@ -37,6 +37,7 @@ export default function PageHero({
         </nav>
         {eyebrow && <p className="mt-6 text-[11px] font-semibold tracking-[0.3em] text-gold uppercase">{eyebrow}</p>}
         <h1 className="h-display mt-3 max-w-4xl text-[clamp(2.4rem,5vw,4.4rem)]">{title}</h1>
+        <div className="mt-6 h-px w-40 bg-gradient-to-r from-gold via-[#e9cf8f] to-transparent" />
         {intro && <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-white/75">{intro}</p>}
       </div>
     </section>

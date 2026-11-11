@@ -42,7 +42,7 @@ function Marquee() {
   return (
     <section aria-hidden className="fade-x overflow-hidden bg-mist py-10 text-[clamp(2rem,4.5vw,3.6rem)] font-semibold tracking-tight text-navy uppercase">
       <div className="marquee flex w-max">{row(false)}</div>
-      <div className="marquee-rev mt-3 flex w-max text-navy/70">{row(true)}</div>
+      <div className="marquee-rev mt-3 flex w-max text-gold">{row(true)}</div>
     </section>
   );
 }
@@ -66,7 +66,7 @@ export default function Home() {
           <div className="divide-y divide-line">
             {STRENGTHS.map(({ icon: Icon, t, d }, i) => (
               <Reveal key={t} delay={i * 90} className="group flex gap-5 py-7 first:pt-0">
-                <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-mist text-navy transition group-hover:bg-navy group-hover:text-white"><Icon /></span>
+                <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-mist text-[#a8812e] ring-1 ring-gold/30 transition group-hover:bg-navy group-hover:text-gold"><Icon /></span>
                 <div>
                   <h3 className="text-xl font-medium">{t}</h3>
                   <p className="mt-2 text-[15px] leading-relaxed text-muted">{d}</p>
@@ -90,8 +90,8 @@ export default function Home() {
             <Link key={slug} href={`/neighborhoods/${slug}`} className="group relative flex aspect-square flex-col items-center justify-center overflow-hidden border-r border-b border-line p-6 text-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={asset(img)} alt="" className="absolute inset-0 h-full w-full scale-110 object-cover opacity-0 transition duration-700 group-hover:scale-100 group-hover:opacity-100" />
-              <span className="absolute inset-0 bg-navy/70 opacity-0 transition duration-700 group-hover:opacity-100" />
-              <Icon className="relative h-14 w-14 stroke-[1.1] text-navy transition group-hover:text-white" />
+              <span className="absolute inset-0 bg-navy/75 opacity-0 transition duration-700 group-hover:opacity-100" />
+              <Icon className="relative h-14 w-14 stroke-[1.1] text-navy transition group-hover:text-gold" />
               <p className="relative mt-5 text-lg font-medium transition group-hover:text-white">{name}</p>
               <p className="relative text-sm text-muted transition group-hover:text-white/75">{listingsIn(name).length} Properties</p>
             </Link>
@@ -109,7 +109,7 @@ export default function Home() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={asset("/img/michael.jpg")} alt="Michael Bergin" className="relative aspect-[4/5] w-full rounded-3xl object-cover object-top" />
             <div className="absolute right-5 bottom-5 rounded-2xl bg-white/95 p-5 shadow-xl backdrop-blur">
-              <p className="tnum text-3xl font-semibold">15+</p>
+              <p className="tnum gold-text text-3xl font-semibold">15+</p>
               <p className="text-sm text-muted">Years of experience</p>
             </div>
           </Reveal>
@@ -120,7 +120,7 @@ export default function Home() {
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {["Top 1% of Los Angeles agents", "Summers Global representative", "26 five-star client reviews", "CA DRE# 01845572"].map((x) => (
                 <li key={x} className="flex items-center gap-3 text-[15px]">
-                  <span className="grid h-6 w-6 place-items-center rounded-full bg-navy text-[11px] text-white">✓</span>{x}
+                  <span className="grid h-6 w-6 place-items-center rounded-full bg-navy text-[11px] text-gold">✓</span>{x}
                 </li>
               ))}
             </ul>
@@ -144,8 +144,8 @@ export default function Home() {
           <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             {team.map((m, i) => (
               <Reveal key={m.slug} delay={(i % 5) * 50}>
-                <Link href={`/team/${m.slug}`} className="flex h-full flex-col items-center justify-center rounded-2xl bg-mist p-5 text-center transition hover:bg-navy hover:text-white">
-                  <span className="grid h-14 w-14 place-items-center rounded-full bg-white text-sm font-semibold text-navy">{initials(m.name)}</span>
+                <Link href={`/team/${m.slug}`} className="flex h-full flex-col items-center justify-center group rounded-2xl bg-mist p-5 text-center transition hover:bg-navy hover:text-white">
+                  <span className="grid h-14 w-14 place-items-center rounded-full bg-white text-sm font-semibold text-navy ring-1 ring-gold/40 transition group-hover:bg-gold">{initials(m.name)}</span>
                   <p className="mt-3 text-[15px] leading-tight font-medium">{m.name}</p>
                 </Link>
               </Reveal>
@@ -165,7 +165,7 @@ export default function Home() {
                   <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={asset(GUIDE_IMG[g])} alt="" className="h-full w-full object-cover transition duration-[1600ms] group-hover:scale-105" />
-                    <span className="absolute top-3 left-3 rounded-md bg-white px-2.5 py-1 text-[11px] font-medium">{guides[g].steps.length} steps</span>
+                    <span className="absolute top-3 left-3 rounded-md bg-navy px-2.5 py-1 text-[11px] font-medium text-gold">{guides[g].steps.length} steps</span>
                   </div>
                   <div className="p-3 pt-5">
                     <p className="text-xl font-medium">{guideLabel[g]}</p>

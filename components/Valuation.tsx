@@ -23,7 +23,7 @@ export default function Valuation() {
             <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="flex flex-col gap-3 rounded-2xl bg-white p-3 sm:flex-row">
               <label htmlFor="addr" className="sr-only">Property address</label>
               <input id="addr" required placeholder="Enter your property address" className="h-13 flex-1 rounded-xl px-4 text-navy outline-none placeholder:text-muted" />
-              <button className="h-13 rounded-full bg-navy px-7 text-sm font-medium hover:bg-navy-3">Get Estimate</button>
+              <button className="h-13 rounded-full bg-gold px-7 text-sm font-semibold text-navy transition hover:bg-[#e2c27f]">Get Estimate</button>
             </form>
           )}
         </div>

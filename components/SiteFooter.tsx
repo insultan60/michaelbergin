@@ -11,13 +11,14 @@ const FLOAT = [
 export default function SiteFooter() {
   return (
     <footer className="bg-navy text-white">
+      <div className="gold-rule" />
       {/* Ready to get started */}
       <div className="relative mx-auto max-w-[1240px] px-5 py-28 text-center md:py-36">
         {FLOAT.map(([src, pos, delay]) => (
           // eslint-disable-next-line @next/next/no-img-element
-          <img key={src} src={asset(src)} alt="" className={`bob absolute hidden aspect-[4/3] rounded-lg object-cover opacity-90 sm:block ${pos}`} style={{ animationDelay: delay }} />
+          <img key={src} src={asset(src)} alt="" className={`bob absolute hidden aspect-[4/3] rounded-lg object-cover opacity-90 ring-1 ring-gold/60 ring-offset-4 ring-offset-navy sm:block ${pos}`} style={{ animationDelay: delay }} />
         ))}
-        <h2 className="h-display relative mx-auto max-w-lg text-4xl md:text-[3.4rem]">Ready To Get Started?</h2>
+        <h2 className="h-display relative mx-auto max-w-lg text-4xl md:text-[3.4rem]">Ready To Get <span className="gold-text italic font-display font-light pr-1">Started?</span></h2>
         <p className="relative mx-auto mt-5 max-w-md text-white/65">Michael represents buyers and sellers throughout Southern California, from the coast to the San Fernando Valley.</p>
         <a href={asset("/contact")} className="relative mt-8 inline-block rounded-full bg-white px-7 py-3.5 text-sm font-medium text-navy hover:bg-mist">Contact Michael</a>
       </div>

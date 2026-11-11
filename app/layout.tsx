@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Michael Bergin is a top 1% Los Angeles real estate agent with 15+ years in Studio City, Sherman Oaks, Encino, Toluca Lake and Tarzana.",
 };
 
-export const viewport: Viewport = { themeColor: "#0b1b3a" };
+export const viewport: Viewport = { themeColor: "#0d0d0f" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

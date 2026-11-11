@@ -16,7 +16,7 @@ export function Specs({ l, className = "" }: { l: Listing; className?: string })
 export default function ListingCard({ l }: { l: Listing }) {
   const photo = l.photos[0];
   return (
-    <Link href={`/properties/${l.slug}`} className="group block overflow-hidden rounded-2xl bg-white ring-1 ring-line transition hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(11,27,58,0.35)]">
+    <Link href={`/properties/${l.slug}`} className="group block overflow-hidden rounded-2xl bg-white ring-1 ring-line transition hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(13,13,15,0.35)]">
       <div className="relative aspect-[4/3] overflow-hidden bg-navy">
         {photo ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -31,7 +31,7 @@ export default function ListingCard({ l }: { l: Listing }) {
             </div>
           </div>
         )}
-        <span className={`absolute top-3 right-3 rounded-md px-2.5 py-1 text-[11px] font-medium ${l.status === "Sold" ? "bg-navy text-white" : "bg-white text-navy"}`}>
+        <span className={`absolute top-3 right-3 rounded-md px-2.5 py-1 text-[11px] font-medium ${l.status === "Sold" ? "bg-navy text-white" : l.status === "Coming Soon" ? "bg-navy text-gold ring-1 ring-gold/50" : "bg-white text-navy"}`}>
           {l.status}
         </span>
       </div>

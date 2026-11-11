@@ -11,6 +11,8 @@ const nextConfig: NextConfig = {
     trailingSlash: true,
     images: { loader: "custom", loaderFile: "./lib/image-loader.ts" },
   }),
+  // Lets the dev server be previewed at 127.0.0.1 as well as localhost
+  allowedDevOrigins: ["127.0.0.1"],
   experimental: {
     agentFeedback: true,
   },

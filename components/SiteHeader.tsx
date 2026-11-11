@@ -48,7 +48,7 @@ export default function SiteHeader() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 border-b transition-[background-color,box-shadow,border-color] duration-300 ${
-          light ? "border-navy/10 bg-white/80 shadow-[0_1px_24px_rgba(11,27,58,0.07)] backdrop-blur-xl backdrop-saturate-150" : "border-transparent"
+          light ? "border-navy/10 bg-white/80 shadow-[0_1px_24px_rgba(13,13,15,0.07)] backdrop-blur-xl backdrop-saturate-150" : "border-transparent"
         }`}
       >
         <div className={`mx-auto flex w-[min(1360px,100%-40px)] items-center justify-between gap-6 transition-[height] duration-300 ${scrolled || path === "/properties" ? "h-16" : "h-[84px]"}`}>
@@ -81,11 +81,11 @@ export default function SiteHeader() {
             <Link
               href="/home-value"
               className={`group hidden items-center gap-2 rounded-full px-[22px] py-[13px] text-[14px] font-medium transition active:scale-[0.97] sm:inline-flex ${
-                light ? "bg-navy text-white shadow-[0_1px_2px_rgba(11,27,58,0.25)] hover:bg-navy-3 hover:shadow-[0_6px_20px_rgba(11,27,58,0.28)]" : "bg-white text-navy hover:bg-mist"
+                light ? "bg-navy text-white shadow-[0_1px_2px_rgba(13,13,15,0.25)] hover:bg-navy-3 hover:shadow-[0_6px_20px_rgba(13,13,15,0.28)]" : "bg-white text-navy hover:bg-mist"
               }`}
             >
               <span>What&apos;s My Home Worth?</span>
-              <Arrow />
+              <span className={light ? "text-gold" : ""}><Arrow /></span>
             </Link>
             <button
               onClick={() => setOpen(!open)}

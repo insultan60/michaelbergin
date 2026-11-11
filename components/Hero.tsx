@@ -40,7 +40,7 @@ export default function Hero() {
         <p className="text-[11px] font-semibold tracking-[0.3em] text-gold uppercase">Michael Bergin · CA DRE# 01845572</p>
         <h1 className="h-display mt-5 max-w-3xl text-[clamp(2.4rem,min(5.2vw,8.5svh),4.75rem)]">
           Your trusted guide to
-          <span className="block font-display font-light whitespace-nowrap text-[#c9d8ec] italic">Valley living.</span>
+          <span className="block font-display font-light whitespace-nowrap italic gold-text pr-2">Valley living.</span>
         </h1>
         <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-white/75 md:text-base">
           Michael represents buyers and sellers throughout Southern California, from the coast to the San Fernando Valley,
@@ -49,7 +49,7 @@ export default function Hero() {
         <div className="mt-8 flex flex-wrap gap-3">
           <Link href="/properties" className="group flex items-center gap-2 rounded-full bg-white py-3.5 pr-3.5 pl-6 text-sm font-medium text-navy transition hover:bg-mist">
             Explore Properties
-            <span className="grid h-7 w-7 place-items-center rounded-full bg-navy text-white transition group-hover:rotate-45"><IconArrow className="h-3.5 w-3.5" /></span>
+            <span className="grid h-7 w-7 place-items-center rounded-full bg-gold text-navy transition group-hover:rotate-45"><IconArrow className="h-3.5 w-3.5" /></span>
           </Link>
           <Link href="/home-value" className="rounded-full px-6 py-3.5 text-sm font-medium ring-1 ring-white/40 backdrop-blur-sm transition hover:bg-white/10">
             What&apos;s my home worth?
@@ -62,7 +62,7 @@ export default function Hero() {
           <dl className="flex gap-8 md:gap-12">
             {STATS.map(([n, l]) => (
               <div key={l}>
-                <dt className="tnum text-2xl font-semibold md:text-3xl">{n}</dt>
+                <dt className="tnum gold-text text-2xl font-semibold md:text-3xl">{n}</dt>
                 <dd className="text-xs text-white/60 md:text-sm">{l}</dd>
               </div>
             ))}

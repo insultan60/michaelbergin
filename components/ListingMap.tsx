@@ -15,8 +15,8 @@ type L = typeof import("leaflet");
 // Inline so the pins render even before the stylesheet's pin rules load
 const PIN =
   "position:absolute;transform:translate(-50%,-100%);display:inline-block;white-space:nowrap;padding:5px 10px;border-radius:999px;" +
-  "background:#fff;color:#0b1b3a;font:600 12px/1 var(--font-jakarta),system-ui,sans-serif;box-shadow:0 2px 10px rgba(11,27,58,.3);border:1px solid rgba(11,27,58,.12);";
-const SOLD = "background:#dfe5ee;color:#6b768a;";
+  "background:#fff;color:#0d0d0f;font:600 12px/1 var(--font-jakarta),system-ui,sans-serif;box-shadow:0 2px 10px rgba(13,13,15,.3);border:1px solid rgba(13,13,15,.12);";
+const SOLD = "background:#e7e1d5;color:#6f6a61;";
 
 /** Real map (OpenStreetMap data, CARTO light tiles) with a price pin per listing. */
 export default function ListingMap({
@@ -109,8 +109,8 @@ export default function ListingMap({
       if (pin) {
         const on = slug === active;
         const sold = pin.classList.contains("is-sold");
-        pin.style.background = on ? "#0b1b3a" : sold ? "#dfe5ee" : "#fff";
-        pin.style.color = on ? "#fff" : sold ? "#6b768a" : "#0b1b3a";
+        pin.style.background = on ? "#0d0d0f" : sold ? "#e7e1d5" : "#fff";
+        pin.style.color = on ? "#fff" : sold ? "#6f6a61" : "#0d0d0f";
         pin.style.transform = `translate(-50%,-100%) scale(${on ? 1.15 : 1})`;
       }
       if (slug === active) m.setZIndexOffset(1000);

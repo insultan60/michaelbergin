@@ -23,9 +23,9 @@ export default function Reviews() {
       <div className="relative mx-auto grid max-w-[1240px] items-center gap-14 px-5 md:grid-cols-[0.9fr_1.1fr]">
         <div>
           <h2 className="h-display text-4xl md:text-[3.2rem]">What Clients Say</h2>
-          <Link href="/reviews" className="mt-6 inline-block rounded-full px-6 py-3 text-sm ring-1 ring-white/30 hover:bg-white/10">Read all 26 reviews</Link>
+          <Link href="/reviews" className="mt-6 inline-block rounded-full px-6 py-3 text-sm text-gold ring-1 ring-gold/50 hover:bg-gold hover:text-navy">Read all 26 reviews</Link>
           <div className="mt-10 flex items-center gap-5">
-            <p className="tnum text-5xl font-semibold">5.0</p>
+            <p className="tnum gold-text text-5xl font-semibold">5.0</p>
             <div>
               <span className="flex text-gold">{Array.from({ length: 5 }, (_, k) => <IconStar key={k} />)}</span>
               <p className="mt-1 text-sm text-white/60">Based on 26 client reviews</p>
@@ -37,7 +37,7 @@ export default function Reviews() {
         <div className="relative">
           <p className="mb-4 line-clamp-2 px-8 text-sm text-white/25">{at(-1).text}</p>
           <figure key={i} className="rise rounded-2xl bg-white p-8 text-navy shadow-2xl md:p-10">
-            <span className="text-5xl leading-none text-navy/20">“</span>
+            <span className="text-5xl leading-none text-gold">“</span>
             <blockquote className="-mt-3 text-[17px] leading-relaxed">{at(0).text}</blockquote>
             <figcaption className="mt-7 flex items-center gap-3 border-t border-line pt-5">
               <span className="grid h-11 w-11 place-items-center rounded-full bg-navy text-sm font-semibold text-white">{initials(at(0).author)}</span>
